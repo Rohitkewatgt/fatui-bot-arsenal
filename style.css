@@ -52,29 +52,39 @@ body {
 ----------------------------------- */
 
 .site-header {
-    max-width: 750px;
+    position: relative;
 
-    margin-bottom: 80px;
+    max-width: 800px;
+
+    margin-bottom: 85px;
+
+    padding-left: 24px;
+
+    border-left: 2px solid var(--accent);
 }
 
 
 .eyebrow {
-    margin: 0 0 12px 0;
+    margin: 0 0 14px 0;
 
-    color: var(--accent);
+    color: var(--cold);
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
 
 h1 {
     margin: 0 0 20px 0;
 
-    font-size: 48px;
-    line-height: 1.1;
+    color: var(--text);
+
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.05;
+
     letter-spacing: 1px;
 }
 
@@ -126,11 +136,21 @@ h2 {
 ----------------------------------- */
 
 .application-card {
-    padding: 28px;
+    position: relative;
 
-    background-color: var(--surface);
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.025),
+            transparent 45%
+        ),
+        var(--surface);
 
     border: 1px solid var(--border);
+
+    overflow: hidden;
 
     transition:
         background-color 0.2s ease,
@@ -140,30 +160,53 @@ h2 {
 
 
 .application-card:hover {
-    background-color: var(--surface-hover);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.04),
+            transparent 45%
+        ),
+        var(--surface-hover);
 
     border-color: var(--border-hover);
 
     transform: translateY(-3px);
 }
 
+.application-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: var(--accent);
+}
 
 .application-label {
     margin: 0 0 10px 0;
 
-    color: var(--muted);
+    color: var(--accent);
 
     font-size: 11px;
     font-weight: bold;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
 }
 
 
 .application-card h3 {
     margin: 0;
 
-    font-size: 30px;
+    color: var(--text);
+
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 
@@ -190,11 +233,13 @@ h2 {
 
 
 .application-links a {
-    padding: 9px 14px;
+    padding: 9px 15px;
+
+    background-color: transparent;
 
     border: 1px solid var(--border);
 
-    color: var(--text);
+    color: var(--muted);
 
     font-size: 14px;
 
@@ -206,7 +251,6 @@ h2 {
         color 0.2s ease;
 }
 
-
 .application-links a:hover {
     background-color: var(--accent);
 
@@ -214,7 +258,6 @@ h2 {
 
     color: #ffffff;
 }
-
 
 /* -----------------------------------
    Footer
@@ -256,10 +299,9 @@ footer p {
     }
 
 
-    h1 {
-        font-size: 36px;
-    }
-
+h1 {
+    font-size: 38px;
+}
 
     .subtitle {
         font-size: 16px;
