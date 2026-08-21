@@ -89,47 +89,76 @@
     </p>
 
 
-    <h2>4. Text-to-Speech Engines</h2>
+    <h2>4. Text-to-Speech Processing</h2>
 
-    <p>
-        Marionette currently supports multiple text-to-speech
-        engines. The handling of message text depends on which
-        engine is selected.
-    </p>
+<p>
+    Marionette converts eligible Discord messages into spoken audio
+    using a selected text-to-speech engine. Marionette currently
+    supports Piper and Fish Audio.
+</p>
 
+<h3>Piper</h3>
 
-    <h3>Piper</h3>
+<p>
+    Piper is a locally operated text-to-speech engine. When Piper is
+    selected, Marionette sends the prepared speech text to a Piper
+    process running on the computer hosting Marionette.
+</p>
 
-    <p>
-        Piper is a locally operated text-to-speech engine. When Piper
-        is selected, Marionette sends the text to the Piper process
-        running on the computer hosting Marionette. The text is not
-        sent to an external text-to-speech service by Marionette as
-        part of Piper processing.
-    </p>
+<p>
+    Piper performs speech generation locally using a voice model
+    installed on that computer. The text processed by Piper is not
+    sent to an external text-to-speech provider by Marionette.
+</p>
 
+<p>
+    The resulting audio is returned to Marionette and temporarily
+    stored locally so that it can be played in the appropriate
+    Discord voice channel.
+</p>
 
-    <h3>Fish Audio</h3>
+<h3>Fish Audio</h3>
 
-    <p>
-        When Fish Audio is selected, the text that Marionette is
-        instructed to speak is transmitted to Fish Audio's services
-        for speech generation.
-    </p>
+<p>
+    Fish Audio is an external text-to-speech service. When Fish Audio
+    is selected, Marionette sends the prepared speech text to the
+    Fish Audio API for speech generation.
+</p>
 
-    <p>
-        Fish Audio is an independent third-party service. Information
-        submitted to Fish Audio may be handled according to Fish
-        Audio's own terms, privacy policy, and data-handling
-        practices.
-    </p>
+<p>
+    The request sent by Marionette contains the text to be spoken,
+    the identifier of the selected Fish Audio voice/model, and the
+    requested audio format.
+</p>
 
-    <p>
-        Users should review Fish Audio's policies for information
-        about how Fish Audio handles information submitted through
-        its services.
-    </p>
+<p>
+    Marionette currently uses a Fish Audio voice model configured for
+    the Sandrone voice.
+</p>
 
+<p>
+    Fish Audio generates the requested speech and returns the
+    resulting audio to Marionette. The returned audio is temporarily
+    stored on the computer running Marionette while it is prepared
+    for playback.
+</p>
+
+<p>
+    Fish Audio is an independent third-party service. Information
+    submitted to Fish Audio may be processed and retained according
+    to Fish Audio's own policies and terms. Marionette does not
+    control Fish Audio's internal processing or retention practices.
+</p>
+
+<p>
+    Users should review
+    <a href="https://fish.audio/privacy/">
+        Fish Audio's Privacy Policy
+    </a>
+    for information about how Fish Audio handles information
+    submitted to its services.
+</p>
+    
 
     <h2>5. Temporary Processing and Storage</h2>
 
