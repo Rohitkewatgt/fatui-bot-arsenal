@@ -3,20 +3,21 @@
 ----------------------------------- */
 
 :root {
-    --background: #0d0f12;
-    --surface: #15181d;
-    --surface-hover: #1b1f25;
+    --background: #0b0e12;
+    --surface: #12161c;
+    --surface-hover: #181d24;
 
-    --border: #2b3038;
-    --border-hover: #414852;
+    --border: #29313a;
+    --border-hover: #3d4854;
 
-    --text: #e6e8eb;
-    --muted: #9299a3;
+    --text: #e7e9ec;
+    --muted: #8e98a4;
 
-    --accent: #9f3f4a;
-    --accent-hover: #bd4c59;
+    --accent: #8f303d;
+    --accent-hover: #b43d4b;
+
+    --cold: #aab8c5;
 }
-
 
 * {
     box-sizing: border-box;
